@@ -1,0 +1,31 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Zotero sync tests (mocked, offline)
+        run: python tests/test_zotero_sync.py
+      - name: Note script help works
+        run: python scripts/new_note.py --help
+      - name: Literature matrix header is exact
+        run: |
+          python - <<'EOF'
+          import csv
+          expected = "key,year,title,venue,status,failure_or_topic,method,evidence,limitation,relevance,note_file".split(",")
+          with open("matrix/literature-matrix.csv", encoding="utf-8", newline="") as f:
+              assert next(csv.reader(f)) == expected, "matrix header changed"
+          print("matrix header OK")
+          EOF

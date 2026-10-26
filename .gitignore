@@ -1,0 +1,22 @@
+# Local PDFs (ignoring does not back them up; see README section 13)
+papers/*.pdf
+papers/zotero/**/*.pdf
+
+# Secrets and local settings
+.env
+.claude/settings.local.json
+
+# Personal Zotero data: real collection keys/names, imported-paper manifest, reports, index
+scripts/zotero_sync_config.local.json
+refs/zotero-sync/
+papers/zotero/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db

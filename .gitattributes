@@ -1,0 +1,3 @@
+# Normalize line endings; keep PDFs binary
+* text=auto
+*.pdf binary

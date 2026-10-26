@@ -1,0 +1,24 @@
+{
+  "_comment": "EXAMPLE config for scripts/zotero_sync.py. Copy this file to scripts/zotero_sync_config.local.json (git-ignored) and replace the placeholder keys and names with your own. Find collection keys by running a dry run after enabling Zotero's local API, or in Zotero's collection URLs. Each entry pairs a stable Zotero collection key with its name; the name is also checked against live Zotero, so the sync stops if a key no longer matches. Keys starting with '_' are ignored. Never put secrets or account identifiers here.",
+  "api_base": "http://127.0.0.1:23119/api",
+  "zotero_storage_dir": "~/Zotero/storage",
+  "dest_dir": "papers/zotero",
+  "manifest": "refs/zotero-sync/manifest.jsonl",
+  "reports_dir": "refs/zotero-sync/reports",
+  "index": "refs/zotero-sync/index.md",
+  "duplicate_scan_dirs": ["papers"],
+  "page_size": 100,
+  "timeout_seconds": 20,
+  "allow": [
+    {"key": "ALLOW001", "name": "00 Inbox"},
+    {"key": "ALLOW002", "name": "01 Foundations"},
+    {"key": "ALLOW003", "name": "02 Reading Now"},
+    {"key": "ALLOW004", "name": "03 Read and Noted"}
+  ],
+  "deny_root_name": "Excluded Project",
+  "deny": [
+    {"key": "DENYROOT", "name": "Excluded Project"},
+    {"key": "DENYSUB1", "name": "Excluded Project Subcollection A"},
+    {"key": "DENYSUB2", "name": "Excluded Project Subcollection B"}
+  ]
+}
