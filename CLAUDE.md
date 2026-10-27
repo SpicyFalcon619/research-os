@@ -88,4 +88,13 @@ Columns, exactly in this order:
 - `matrix/`: literature matrix. `reading-list/`: learning plans and candidate papers.
 - `refs/`: bibliography exports (optional Zotero/Better BibTeX). `papers/`: local PDFs (git-ignored).
 - `projects/`: empty until I choose to start a project. Do not create project material here on your own.
-- `scripts/`: small utilities. `.claude/commands/`: slash commands (`/triage`, `/read-paper`, `/add-to-matrix`, `/find-related`, `/weekly-review`).
+- `scripts/`: small utilities. `.claude/commands/`: slash commands (`/triage`, `/read-paper`, `/add-to-matrix`, `/find-related`, `/weekly-review`, and the optional `/sync-zotero`).
+- `notes/study-notes/`: optional copies of my own study notes. The matrix and weekly review read only `notes/papers/`.
+- Zotero is the source of truth for references. The optional sync only reads from it and copies PDFs. Never write to Zotero or its database unless I ask for one specific edit, and tell me before you do. My real collection keys and names live in a git-ignored local config; never put them in a tracked file.
+
+## Feedback and Teaching Style
+
+- When I share an answer or a note, lead with the main point and any real misunderstanding. Do not grade every small wording difference line by line.
+- Prefer questions that ask me to apply an idea, with my notes open, over recalling lists or steps. If I say something feels like a memory test, change style.
+- When I ask for help filling in a note, tell me what goes where and what to look for. Put only my own words in the file, exactly as I wrote them, unless I ask you to draft. Anything you add to my notes must be clearly labeled as an assistant addition, with the date, and kept apart from my text.
+- Say what you are about to change before editing my files. Ask before pushing, publishing, or deleting anything.

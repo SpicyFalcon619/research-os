@@ -11,16 +11,20 @@ It is **not tied to any project, research question, thesis, or publication targe
 | Path | What it is for |
 | --- | --- |
 | `CLAUDE.md` | Rules Claude follows here: mentor role, verification labels, naming, matrix format. |
-| `.claude/commands/` | The five slash commands (section 8). |
+| `.claude/commands/` | The six slash commands (section 8). |
 | `notes/papers/` | Your notes on individual papers, in your own words. |
+| `notes/study-notes/` | Optional: copies of your own study notes (for example on a method paper), kept apart so the matrix and weekly review only read `notes/papers/`. |
 | `notes/templates/paper-note.md` | The template new notes are made from. |
-| `matrix/literature-matrix.csv` | A table for comparing papers. It starts with only a header row. |
+| `matrix/literature-matrix.csv` | A table for comparing papers. A fresh workspace starts with only the header row. If you copied this repo, delete any example rows so the matrix holds only your own papers. |
 | `reading-list/starter-list.md` | A staged starter list, a four-week plan, and a guide to finding papers. |
 | `refs/` | Bibliography exports (optional, see section 6). |
 | `papers/` | Local PDF storage. PDFs here are not committed to Git. |
 | `projects/` | Empty on purpose. Use it only when you choose to start a project. |
 | `scripts/new_note.py` | Creates a new paper note from the template. |
-| `.gitignore` | Keeps PDFs, secrets, and Python junk out of Git. |
+| `scripts/zotero_sync.py` | Optional read-only Zotero sync (section 12). Its settings are in `scripts/zotero_sync_config.example.json`; your real copy, `...local.json`, is git-ignored. |
+| `tests/` | Offline tests for the Zotero sync. Run `python tests/test_zotero_sync.py`. |
+| `.github/workflows/` | Runs those tests on GitHub for every push. |
+| `.gitignore` | Keeps PDFs, secrets, your Zotero config and sync records, and Python junk out of Git. |
 
 The **literature matrix is a comparison tool, not a replacement for detailed notes.** Its cells are short. The thinking lives in your notes.
 
@@ -94,6 +98,7 @@ Run these inside Claude Code started in this folder. They require Claude Code to
 | `/add-to-matrix <note filename>` | Adds or updates one matrix row from a note in `notes/papers/`, using only what is in the note. Empty cells are left empty and reported. | `/add-to-matrix 2017-vaswani-attention-is-all-you-need.md` |
 | `/find-related <paper, URL, title, or topic>` | Suggests candidate papers by citation chaining and search, each labeled by verification. It discovers only; it does not save anything. | `/find-related "Attention Is All You Need"` |
 | `/weekly-review` | Report on this week's notes and matrix rows, quality, honesty checks, patterns, and 2-4 suggestions. Report-only: it never edits your files. | `/weekly-review` |
+| `/sync-zotero` | Optional. Checks Zotero for eligible PDFs with a dry run first, and asks before copying anything. Needs the setup in section 12. | `/sync-zotero` |
 
 Limitations:
 
