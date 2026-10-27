@@ -22,6 +22,7 @@ It is **not tied to any project, research question, thesis, or publication targe
 | `projects/` | Empty on purpose. Use it only when you choose to start a project. |
 | `scripts/new_note.py` | Creates a new paper note from the template. |
 | `scripts/zotero_sync.py` | Optional read-only Zotero sync (section 12). Its settings are in `scripts/zotero_sync_config.example.json`; your real copy, `...local.json`, is git-ignored. |
+| `docs/working-solo.md` | How to use the whole workspace by hand, without an AI assistant or the slash commands. |
 | `tests/` | Offline tests for the Zotero sync. Run `python tests/test_zotero_sync.py`. |
 | `.github/workflows/` | Runs those tests on GitHub for every push. |
 | `.gitignore` | Keeps PDFs, secrets, your Zotero config and sync records, and Python junk out of Git. |
@@ -106,6 +107,7 @@ Limitations:
 - `/find-related` needs web access. Search results are leads. The command labels each candidate, and you should open the sources yourself.
 - `/add-to-matrix` needs the note filename to exist in `notes/papers/`, and it needs Python.
 - `/weekly-review` works best when notes have a "Date read" or recent file dates.
+- No assistant available, or out of usage? Every command has a manual equivalent in [docs/working-solo.md](docs/working-solo.md).
 
 ## 9. How to create a new note
 
