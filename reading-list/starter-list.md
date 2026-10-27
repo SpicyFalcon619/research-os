@@ -4,7 +4,7 @@ A general-purpose list for learning how research works and for getting oriented 
 
 ## How to read the labels
 
-Checked on **2026-10-26**.
+Checked on **2026-10-26** (entries 1-13) and **2026-10-28** (entries 14-15).
 
 | Label | Meaning |
 | --- | --- |
@@ -32,7 +32,9 @@ Go through the four stages roughly in order, but you do not need to finish a sta
 
 | Suitable as a beginner | Later, more technical stage |
 | --- | --- |
-| Keshav; LeCun et al.; Kim et al.; Kulesza et al.; Sharma et al. (skim first) | Adam; Dropout; ResNet; Vaswani et al.; Devlin et al.; Brown et al.; Wei et al.; Ouyang et al. |
+| Keshav; Domingos; Pedregosa et al.; LeCun et al.; Kim et al.; Kulesza et al.; Sharma et al. (skim first) | Adam; Dropout; ResNet; Vaswani et al.; Devlin et al.; Brown et al.; Wei et al.; Ouyang et al. |
+
+**If you are early in your first machine learning course:** start with Entries 14 and 15 (added later, after Stage 4), then come back to the Stage 2 order. They are about ideas and tools you meet in a first supervised-learning course, so they are a gentler place to practice reading a real paper than the neural-network and Transformer papers. This is my judgment (`FROM MEMORY`), not checked.
 
 ---
 
@@ -226,6 +228,36 @@ Go through the four stages roughly in order, but you do not need to finish a sta
 
 ---
 
+## Added later: accessible first papers for a first ML course
+
+### 14. A Few Useful Things to Know About Machine Learning (Domingos)
+
+- **Label:** ✓ VERIFIED (bibliographic details via DOI registry only)
+- **Authors:** Pedro Domingos
+- **Year / venue:** 2012, Communications of the ACM, vol. 55, issue 10, pp. 78-87. DOI 10.1145/2347736.2347755
+- **Type:** The record says "journal article". That it is an essay of practical lessons, not an experiment, is `FROM MEMORY`; check when you open it.
+- **Publication status:** Published journal article (CACM). The review process is not described in the source I opened.
+- **Links:** Official: <https://doi.org/10.1145/2347736.2347755>. Open version: none verified.
+- **Scope checked:** Crossref DOI record (title, author, journal, volume, issue, pages, year, type, DOI), 2026-10-28. The abstract and full text were not opened.
+- **Why read:** `FROM MEMORY`: a plain-language set of lessons about what makes machine learning work or fail in practice, with little math. A good first real paper if you are in a first ML course.
+- **Learn:** To be decided after you read the abstract.
+- **Prerequisites:** Having seen supervised learning (regression or classification) helps.
+
+### 15. Scikit-learn: Machine Learning in Python (Pedregosa et al.)
+
+- **Label:** ✓ VERIFIED
+- **Authors:** Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel and 12 others (16 authors in total on the JMLR page; see the source for the full list)
+- **Year / venue:** 2011, Journal of Machine Learning Research, vol. 12, pp. 2825-2830
+- **Type:** A short software paper describing a library. From the first abstract sentence: "Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems."
+- **Publication status:** Published journal article (JMLR). The review process is not described on the page I opened.
+- **Links:** Official and open: <https://jmlr.org/papers/v12/pedregosa11a.html>. I did not check the PDF link.
+- **Scope checked:** the JMLR paper page (title, authors, journal, volume, pages, year, first two abstract sentences), 2026-10-28. The full text was not read.
+- **Why read:** `FROM MEMORY`: it is short, and it describes a library many beginners already use, so the subject will feel familiar. Good for practicing a first pass.
+- **Learn:** To be decided after you read the abstract.
+- **Prerequisites:** Basic Python and a first look at supervised learning.
+
+---
+
 ## Four-week starter plan
 
 You do not need to pick a permanent specialization during these four weeks. Adjust the pace to your schedule.
@@ -233,7 +265,7 @@ You do not need to pick a permanent specialization during these four weeks. Adju
 ### Week 1: Learn how to read research
 
 - Read Keshav's paper (Entry 1).
-- Read one foundational paper. Suggestion: the Nature overview (Entry 2). It is a broad introduction. Dropout (Entry 4) is an alternative if you want an original research paper.
+- Read one foundational paper. Suggestion: the Nature overview (Entry 2). It is a broad introduction. Dropout (Entry 4) is an alternative if you want an original research paper. If you are still early in a first ML course, use Entry 14 or 15 instead.
 - Practice: write a one-sentence summary and list what evidence the authors give. Use `python scripts/new_note.py`, then compare your note with the paper.
 
 ### Week 2: Understand a major architecture
@@ -300,5 +332,7 @@ You do not need to pick a permanent specialization during these four weeks. Adju
 | 11 Sycophancy | ICLR proceedings page; ICLR virtual page; arXiv page | OpenReview (browser check) |
 | 12 Kim et al. | FAccT PDF (first page); Crossref record; arXiv page | Rest of paper |
 | 13 Kulesza et al. | Crossref record | ACM page; abstract; full text |
+| 14 Domingos | Crossref record (2026-10-28) | Publisher page; abstract; full text |
+| 15 Pedregosa et al. | JMLR paper page (2026-10-28) | Full text; PDF link |
 
 No full paper was read in full for this list.
